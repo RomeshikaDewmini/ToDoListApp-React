@@ -1,0 +1,153 @@
+*{
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #202124;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: 'Press Start 2P', system-ui;
+}
+
+#root {
+  min-height: 100vh;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  padding: 14px;
+  background: url("./assets/background2.jpg") no-repeat center center/cover;
+  gap: 14px;
+}
+
+header,
+.main {
+  max-width: 800px;
+  max-height: fit-content;
+  width: 100%;
+  margin: 0;
+  gap: 14px;
+}
+
+
+header {
+  display: flex;
+  align-items: stretch;
+}
+
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+  padding: 12px 16px; /* Add padding for a comfortable text area */
+  font-size: 1rem; /* Ensure text size is readable */
+  background-color: #f5f5f5; /* Light background for a modern feel */
+  border: 2px solid #ccc; /* Subtle border */
+  transition: all 0.3s ease; /* Smooth transition for hover and focus effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+header input:focus {
+  border-color: #674188; /* Highlight border on focus */
+  box-shadow: 0 4px 8px rgba(103, 65, 136, 0.3); /* Add a colored shadow for focus */
+}
+
+header input:hover {
+  border-color: #b39ddb; /* Change border color slightly on hover */
+}
+
+
+header button {
+  background: #674188; 
+  color: white;
+  font-family: 'Press Start 2P', system-ui; 
+  border: 2px solid #1d0430; 
+  padding: 14px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 200ms; 
+  text-transform: uppercase; 
+}
+
+header button:hover {
+  transform: scale(1.05); 
+}
+
+header button:active {
+  transform: scale(0.95); 
+}
+
+
+p {
+  font-size: 0.9em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 14px;
+  background: rgb(243, 223, 237);
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 10px;
+ 
+}
+
+.actionsContainer button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.5rem; /* Larger icons for a bold appearance */
+  color: #fff; /* Default color for icons */
+  transition: transform 200ms ease, color 200ms ease; /* Smooth transitions for color and size */
+}
+
+
+.actionsContainer button:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover for a game-like feel */
+  
+}
+
+.actionsContainer button:active {
+  transform: scale(0.9); 
+}
+
+
+
+@media (min-width: 640px) {
+
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1.1em;
+    font-style: bold;
+  }
+}
